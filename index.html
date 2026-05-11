@@ -187,11 +187,12 @@ body {
 
 /* ── COMPETITOR CARDS ─────────────────────────── */
 .comp-header {
-  background: var(--navy);
+  background: #EEF2F8;
   padding: 14px 16px;
+  border-left: 4px solid #1F3864;
 }
-.comp-name { color: #fff; font-size: 16px; font-weight: 600; }
-.comp-period { color: var(--vblue); font-size: 11px; margin-top: 2px; }
+.comp-name { color: #1F3864; font-size: 16px; font-weight: 600; }
+.comp-period { color: #6B7280; font-size: 11px; margin-top: 2px; }
 .comp-rows { padding: 0; }
 .comp-row {
   display: flex; justify-content: space-between; align-items: flex-start;
@@ -239,9 +240,9 @@ body {
   border: 2px solid #fff;
 }
 .geo-label { text-align: left !important; font-size: 12px; font-weight: 600; color: var(--navy); white-space: nowrap; background: #FAFBFC !important; border: none !important; }
-.hh { background: var(--hh-bg); color: #fff; border-radius: 4px; }
-.hm { background: var(--hm-bg); color: #fff; border-radius: 4px; }
-.hl { background: var(--hl-bg); color: var(--navy); border-radius: 4px; }
+.hh { background: #B4C9E4; color: #1F3864; border-radius: 4px; font-weight: 700; }
+.hm { background: #C9DDEF; color: #1F3864; border-radius: 4px; font-weight: 700; }
+.hl { background: #E8F3FA; color: #4A5568; border-radius: 4px; font-weight: 700; border: 1px solid #C4DCF0; }
 .heatmap-legend { display: flex; gap: 10px; padding: 10px 16px; align-items: center; flex-wrap: wrap; }
 .heatmap-legend-label { font-size: 10px; color: var(--t3); font-weight: 500; }
 .leg-chip { font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 4px; }
@@ -347,15 +348,6 @@ body {
   body { max-width: 520px; margin: 0 auto; }
   .bottom-nav { max-width: 520px; left: 50%; transform: translateX(-50%); border-radius: 0; }
 }
-
-  .hh { background: #2E74B5; }
-  .hm { background: #4472C4; }
-  .comp-threat-row { background: #1e1700; border-top-color: #5a4200; }
-  .comp-moves { background: #141825; }
-  .comp-src, .comp-row:nth-child(even) { background: #141825; }
-  .geo-label, .heatmap-table th { background: #141825 !important; }
-  .sources-toggle:hover { background: #1e2438; }
-  .source-link { color: var(--vblue); }
 }
 </style>
 </head>
@@ -749,7 +741,7 @@ body {
 
   <!-- Persistent -->
   <div class="card">
-    <div class="comp-header" style="background:#2E74B5">
+    <div class="comp-header" style="background:#EBF6FF;border-left:4px solid #2E74B5">
       <div class="comp-name">Persistent Systems</div>
       <div class="comp-period">FY2025 — Full Year (April 2024 – March 2025) · 24,594 employees</div>
     </div>
@@ -773,7 +765,7 @@ body {
 
   <!-- Coforge -->
   <div class="card">
-    <div class="comp-header" style="background:#4472C4">
+    <div class="comp-header" style="background:#EEF1FB;border-left:4px solid #4472C4">
       <div class="comp-name">Coforge</div>
       <div class="comp-period">FY2025 — Full Year (April 2024 – March 2025) · ~33,500 employees (incl. Cigniti)</div>
     </div>
@@ -797,7 +789,7 @@ body {
 
   <!-- Mphasis -->
   <div class="card">
-    <div class="comp-header" style="background:#1F3864">
+    <div class="comp-header" style="background:#EEF2F8;border-left:4px solid #1F3864">
       <div class="comp-name">Mphasis</div>
       <div class="comp-period">FY2026 — Full Year (April 2025 – March 2026) · ~31,000 employees</div>
     </div>
