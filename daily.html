@@ -322,15 +322,6 @@ body {
 .source-chip-icon { font-size: 10px; }
 
 
-/* ── FREQ BADGE ───────────────────────────────── */
-.top-freq-badge {
-  display: inline-block;
-  background: rgba(255,255,255,.15);
-  color: #fff; font-size: 9px; font-weight: 700;
-  padding: 2px 8px; border-radius: 20px;
-  letter-spacing: .08em; margin-top: 4px;
-  border: 1px solid rgba(255,255,255,.25);
-}
 
 
 
@@ -388,7 +379,6 @@ body {
     <div>
       <div class="top-brand">ITC Infotech Intelligence Brief</div>
       <div class="top-sub">Daily signals · Risks · Opportunities · Threats</div>
-      <div class="top-freq-badge" id="daily-freq-badge">DAILY</div>
     </div>
     <div class="top-date" id="header-date">Loading…</div>
   </div>
@@ -602,7 +592,7 @@ function renderRegulatory(reg) {
 function renderReport(data) {
   // Update header date
   document.getElementById('header-date').innerHTML =
-    `${escHtml(data.generated_date || '')}<br>Leadership Only`;
+    `${escHtml(data.generated_date || '')}<br>Leadership Only<br><span style="font-size:9px;background:rgba(255,255,255,.15);padding:1px 6px;border-radius:10px;letter-spacing:.06em">DAILY</span>`;
 
   // Update footer last updated
   const footerEl = document.getElementById('footer-updated');
