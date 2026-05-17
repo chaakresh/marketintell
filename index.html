@@ -33,7 +33,7 @@ body {
   font-size: 14px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 /* ── STICKY HEADER ────────────────────────────── */
@@ -310,30 +310,7 @@ body {
 .source-text { font-size: 11.5px; color: var(--t2); line-height: 1.4; }
 
 /* ── BOTTOM NAV ───────────────────────────────── */
-.bottom-nav {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
-  background: var(--card);
-  border-top: 1px solid var(--border);
-  display: flex;
-  padding-bottom: env(safe-area-inset-bottom, 0);
-  box-shadow: 0 -4px 20px rgba(0,0,0,.08);
-}
-.nav-item {
-  flex: 1; display: flex; flex-direction: column; align-items: center;
-  padding: 8px 2px 6px;
-  text-decoration: none; color: var(--t3);
-  font-size: 8px; font-weight: 500;
-  transition: color .15s;
-  -webkit-tap-highlight-color: transparent;
-}
-.nav-item.active, .nav-item:hover { color: var(--blue); }
-.nav-dot {
-  width: 5px; height: 5px; border-radius: 50%;
-  background: transparent; margin-bottom: 4px;
-  transition: background .15s;
-}
-.nav-item.active .nav-dot { background: var(--blue); }
-.nav-bar { font-size: 16px; margin-bottom: 3px; color: inherit; }
+
 
 /* ── UTILITY ──────────────────────────────────── */
 .divider { height: 1px; background: var(--border); margin: 4px 0; }
@@ -346,9 +323,8 @@ body {
 
 @media (min-width: 520px) {
   body { max-width: 520px; margin: 0 auto; }
-  .bottom-nav { max-width: 520px; left: 50%; transform: translateX(-50%); border-radius: 0; }
 }
-}
+
 
 /* ── RISK / OPPORTUNITY CARDS ────────────────────────────────────── */
 .ro-card { margin-bottom: 8px; }
@@ -1730,64 +1706,9 @@ body {
 <div style="height:16px"></div>
 
 <!-- BOTTOM NAV -->
-<nav class="bottom-nav" aria-label="Report sections">
-  <a href="#dashboard" class="nav-item">
-    <div class="nav-dot"></div>
-    <span class="nav-bar">⊞</span>
-    <span>Dashboard</span>
-  </a>
-  <a href="#geo" class="nav-item">
-    <div class="nav-dot"></div>
-    <span class="nav-bar">◎</span>
-    <span>Geo</span>
-  </a>
-  <a href="#industry" class="nav-item">
-    <div class="nav-dot"></div>
-    <span class="nav-bar">◈</span>
-    <span>Industry</span>
-  </a>
-  <a href="#competitors" class="nav-item">
-    <div class="nav-dot"></div>
-    <span class="nav-bar">◧</span>
-    <span>Compete</span>
-  </a>
-  <a href="#bpm" class="nav-item">
-    <div class="nav-dot"></div>
-    <span class="nav-bar">◈</span>
-    <span>BPM</span>
-  </a>
-  <a href="#patterns" class="nav-item">
-    <div class="nav-dot"></div>
-    <span class="nav-bar">◫</span>
-    <span>Patterns</span>
-  </a>
-  <a href="#sources" class="nav-item">
-    <div class="nav-dot"></div>
-    <span class="nav-bar">≡</span>
-    <span>Sources</span>
-  </a>
-</nav>
 
-<script>
-// Highlight active nav based on scroll position
-const sections = ['dashboard','geo','industry','competitors','bpm','patterns','sources'];
-const navItems = document.querySelectorAll('.nav-item');
 
-function updateNav() {
-  let active = 'dashboard';
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (el && el.getBoundingClientRect().top < 120) active = id;
-  });
-  navItems.forEach(a => {
-    const target = a.getAttribute('href').slice(1);
-    a.classList.toggle('active', target === active);
-  });
-}
 
-window.addEventListener('scroll', updateNav, { passive: true });
-updateNav();
-</script>
 
 <!-- SOURCE POPUP -->
 <div class="pop-overlay" id="popOverlay"></div>
